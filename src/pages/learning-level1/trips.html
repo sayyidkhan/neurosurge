@@ -1,0 +1,52 @@
+<!-- -->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <span ion-text>Learning Mnemonics</span>
+    </ion-title>
+  </ion-navbar>
+
+  <!--  -->
+  <ion-toolbar padding color="light">
+    <p ion-text no-margin class="text-white">
+      <strong>Level 1 - Remembering the Grocery List</strong>
+    </p>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding class="trips detail-bg">
+
+  <ion-grid>
+        <!-- (click)="viewDetail(trip.id)" -->
+        <div class="trip card" *ngFor="let trip of trips" tappable margin-bottom center>            
+            
+            <div class="background border-bottom" [ngStyle]="{'background-image': 'url(' + trip.thumb + ')'}">
+              <div class="background-filter rlt">
+                <div class="align-bottom" padding-left padding-right>
+                  <div class="clear"></div>
+                </div>
+              </div>
+             <br>
+                  <br>
+            </div>
+            
+            <div class="padding-sm primary-bg">
+              
+              <div style="height: 35px">
+                <h3 class="pull-left text-white" ion-text>
+                    {{ trip.name }}
+                </h3>
+              </div>
+             
+              <ion-icon name="card_description" class="text-white"></ion-icon>
+              <span ion-text class="text-white">{{ trip.card_description }}</span>
+              <br>
+
+            </div>
+          
+        </div>
+
+  </ion-grid>
+
+</ion-content>

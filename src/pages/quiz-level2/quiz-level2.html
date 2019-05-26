@@ -1,0 +1,56 @@
+<!--
+  Generated template for the QuizLevel2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <span ion-text>Learning Mnemonics</span>
+    </ion-title>
+  </ion-navbar>
+
+  <!--  -->
+  <ion-toolbar padding color="light">
+    <p ion-text no-margin class="text-white">
+      <strong>Level 2 - Remembering the Recipe List</strong>
+    </p>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!--recipe list intro-->
+  <ion-card style="background-color: purple;">
+
+    <ion-card-content> 
+        <img src="assets/img/trip/thumb/troll_img.jpeg"/>
+        <ion-card-title class="text-white">
+        Help the Troll with the oven 
+        </ion-card-title>
+        <p style="color: white;"> 
+        You are a <b>RPG Hero.</b> You need to pass a bridge but was stopped by <b>Troll</b>.
+        The troll wants <b>lunch</b>.Help him to recommend a <b>recipe</b> so that you can <b>pass the
+        bridge.</b>
+        </p>
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <div class="trip card" *ngFor="let trip of trips; let i = index" tappable margin-bottom center>            
+              
+              <ion-card-content>
+                <h3> Item No: {{ i + 1 }}</h3>
+                <ion-input type="text" value="Enter Value" class="text-bg-color width-60" [(ngModel)]="inputName"></ion-input>
+                <button type="submit" ion-button color="primary" (click)="validateQuiz(inputName,trip.name)">Check Answers</button>
+              </ion-card-content>
+          
+  </div>
+
+</ion-content>
+
+
+

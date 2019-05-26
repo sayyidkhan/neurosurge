@@ -1,0 +1,28 @@
+page-learning-level2,
+.trips {
+	.card {
+		border-radius: 1rem
+	}
+  .trip {
+    overflow: hidden;
+
+    .background {
+      background-size: 100% auto;
+      background-position: center;
+      height: 300px;
+
+      .background-filter {
+        height: 16rem;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.0));
+
+        .align-bottom {
+          width: 100%;
+
+          h6 {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
